@@ -66,11 +66,17 @@ function buildProposalDoc({ clientName, clientPhone, clientEmail, estimateRef, j
       tb(optional),
     ], { spacing: { after: 200 } })] : []),
 
-    // NOTE
-    ...(note ? [p([
+    // NOTE — always included
+    p([
       tb('NOTE:', u),
-      tb('  ' + note),
-    ], { spacing: { after: 0 } })] : []),
+      tb('  If a permit is pulled there will be additional fees for ', {}),
+      tb('permit', u),
+      tb(' ($500) and additional work that may be required by city ', {}),
+      tb('inspector', u),
+      tb(' such as surge protection ($350), smoke detectors ($75 each) and ', {}),
+      tb('CO2', u),
+      tb('.', {}),
+    ], { spacing: { after: 0 } }),
   ];
 
   return new Document({
