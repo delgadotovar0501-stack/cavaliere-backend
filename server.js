@@ -66,7 +66,19 @@ function buildProposalDoc({ clientName, clientPhone, clientEmail, estimateRef, j
       tb(optional),
     ], { spacing: { after: 200 } })] : []),
 
-    // NOTE — always included
+    // TERMS OF PAYMENT — always included
+    p([
+      tb('TERMS OF PAYMENT:'),
+      t('  50% Deposit due upon acceptance. 50% due on completion.'),
+    ], { spacing: { after: 160 } }),
+
+    // CC fee note — always included
+    p([
+      tb('NOTE:'),
+      t('  All Credit Card payments will incur an additional 3.6% credit card fee for the total amount of the proposal.'),
+    ], { spacing: { after: 160 } }),
+
+    // Permit note — always included
     p([
       tb('NOTE:', u),
       tb('  If a permit is pulled there will be additional fees for ', {}),
