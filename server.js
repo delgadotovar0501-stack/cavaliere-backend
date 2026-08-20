@@ -66,10 +66,17 @@ function buildProposalDoc({ clientName, clientPhone, clientEmail, estimateRef, j
       tb(optional),
     ], { spacing: { after: 200 } })] : []),
 
+    // EXCLUSIONS — always included
+    p([tb('EXCLUSIONS:')], { spacing: { after: 80 } }),
+    p([t('1.  Permit fees issued by the City to be billed to customer.  (If applicable)')], { indent: { left: 720 }, spacing: { after: 60 } }),
+    p([t('2.  Permit runner fees (approximately $275.00 per permit).  (If applicable)')], { indent: { left: 720 }, spacing: { after: 60 } }),
+    p([t('3.  Any other work other than outlined above.')], { indent: { left: 720 }, spacing: { after: 60 } }),
+    p([t('4.  Patch work & painting.')], { indent: { left: 720 }, spacing: { after: 200 } }),
+
     // TERMS OF PAYMENT — always included
     p([
       tb('TERMS OF PAYMENT:'),
-      t('  50% Deposit due upon acceptance. 50% due on completion.'),
+      t('  50% Deposit due on start. 50% due on completion.'),
     ], { spacing: { after: 160 } }),
 
     // CC fee note — always included
